@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "com.extracraftx.minecraft.serveradditionsutil.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "ArrayPaletteMixin",
+    "BlockUpdatePacketMixin",
+    "ShapedRecipeMixin",
+    "SynchronizeRecipesPacketMixin",
+    "GuiSlotUpdatePacketMixin",
+    "InventoryPacketMixin",
+    "EntityEquipmentUpdatePacketMixin",
+    "ChunkDeltaRecordMixin",
+    "EntityTrackerUpdatePacketMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
