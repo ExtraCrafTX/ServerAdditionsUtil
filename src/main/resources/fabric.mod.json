@@ -17,7 +17,11 @@
   "icon": "assets/serveradditionsutil/icon.png",
 
   "environment": "*",
-  "entrypoints": {},
+  "entrypoints": {
+    "main": [
+      "com.extracraftx.minecraft.serveradditionsutil.ServerAdditionsUtil"
+    ]
+  },
   "mixins": [
     "serveradditionsutil.mixins.json"
   ],

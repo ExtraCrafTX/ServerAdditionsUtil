@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "healing_block",
+    "pattern": [
+        "SSS",
+        "SSS",
+        "SSS"
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:sponge"
+        }
+    },
+    "result": {
+        "item": "serveradditionsutil:healing_block",
+        "count": 2
+    }
+}
