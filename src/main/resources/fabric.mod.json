@@ -9,7 +9,8 @@
     "ExtraCrafTX"
   ],
   "contact": {
-    "sources": "https://github.com/ExtraCrafTX/ServerAdditionsUtil"
+    "sources": "https://github.com/ExtraCrafTX/ServerAdditionsUtil",
+    "issues": "https://github.com/ExtraCrafTX/ServerAdditionsUtil/issues"
   },
 
   "license": "All rights reserved",
@@ -24,5 +25,9 @@
   "depends": {
     "fabricloader": ">=0.4.0",
     "fabric": "*"
+  },
+
+  "custom": {
+    "modmenu:api": true
   }
 }
