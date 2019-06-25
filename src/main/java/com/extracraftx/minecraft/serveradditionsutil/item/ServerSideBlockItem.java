@@ -17,14 +17,33 @@ public class ServerSideBlockItem extends BlockItem implements ClientItemStackPro
     private Vanillifier<ItemStack> vanillifier;
     private final Identifier id;
 
-    public ServerSideBlockItem(Block block, Identifier id, Item.Settings settings,
-            Vanillifier<ItemStack> itemStackSupplier) {
+    /**
+     * Creates a block item for the supplied block with the given identifier and
+     * item settings which will be vanillified using the given vanillifier
+     * 
+     * @param block       The block to create a block item for
+     * @param id          The identifier of the block item
+     * @param settings    The item settings
+     * @param vanillifier The vanillifier to provide item stacks for clients
+     */
+    public ServerSideBlockItem(Block block, Identifier id, Item.Settings settings, Vanillifier<ItemStack> vanillifier) {
         super(block, settings);
-        this.vanillifier = itemStackSupplier;
+        this.vanillifier = vanillifier;
         this.id = id;
     }
 
-    public <T extends Block & ClientBlockStateProvider> ServerSideBlockItem(T block, Identifier id, Item.Settings settings) {
+    /**
+     * Creates a block item for the supplied block with the given identifier and
+     * item settings. The block must also provide client block states. Creates a
+     * default vanillifier that takes the incoming stack and copies its count to a
+     * stack with the representation of the given block and gives it a custom name
+     * 
+     * @param block    The block to create a block item for
+     * @param id       The identifier of the block item
+     * @param settings The item settings
+     */
+    public <T extends Block & ClientBlockStateProvider> ServerSideBlockItem(T block, Identifier id,
+            Item.Settings settings) {
         super(block, settings);
         Item representation = block.getDefaultClientBlockState().getBlock().asItem();
         this.id = id;
