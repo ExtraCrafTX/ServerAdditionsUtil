@@ -17,3 +17,5 @@ There are still many issues, but here are some that I already know of:
 * Just opening the creative inventory while in possesion of a modded block renders the block useless (**WIP**)
 * Picking a block (middle click) in creative just gives you the vanilla version
 * Falling block entities do not show the correct block state (**WIP**)
+* Using the added blocks/items in commands doesn't allow for auto-complete (**WIP**)
+* Command feedback for added blocks/items doesn't give the translated name (**WIP**)
