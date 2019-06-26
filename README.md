@@ -6,8 +6,7 @@ The block, when right clicked, heals the player for 1 heart. If the player is al
 * [`resources/assets/serveradditionsutil/lang`](src/main/resources/assets/serveradditionsutil/lang) contains the lang file for the name of the block. This is also the same as it would normally be.
 
 # ServerAdditionsUtil
-A utility that allows for easy server-side-only additions to the game.  
-Intended to be used as a jar-in-jar.
+A utility that allows for easy server-side-only additions to the game.
 
 **This project is still very much a work in progress and as such nothing is final! Literally *everything* is still subject to major changes!**
 
