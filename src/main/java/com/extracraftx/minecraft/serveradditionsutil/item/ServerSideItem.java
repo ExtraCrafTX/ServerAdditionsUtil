@@ -43,7 +43,8 @@ public class ServerSideItem extends Item implements ClientItemStackProvider {
         vanillifier = (original) -> {
             ItemStack changed = new ItemStack(representation);
             changed.setCount(original.getCount());
-            changed.setCustomName(new TextComponent(I18n.translate(getName(original).getText())));
+            changed.setCustomName(new TextComponent(I18n.translate(getName(original).getText()))
+                    .modifyStyle(style -> style.setItalic(false)).applyFormat(getRarity(original).formatting));
             return changed;
         };
     }
