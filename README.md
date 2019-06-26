@@ -1,6 +1,5 @@
 # ServerAdditionsUtil
-A utility that allows for easy server-side-only additions to the game.  
-Intended to be used as a jar-in-jar.
+A utility that allows for easy server-side-only additions to the game.
 
 **This project is still very much a work in progress and as such nothing is final! Literally *everything* is still subject to major changes!**
 
