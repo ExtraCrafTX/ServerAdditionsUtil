@@ -10,7 +10,17 @@ A utility that allows for easy server-side-only additions to the game.
 
 **This project is still very much a work in progress and as such nothing is final! Literally *everything* is still subject to major changes!**
 
-### Usage
+## Maven
+```gradle
+repositories {
+    maven { url "https://minecraft.curseforge.com/api/maven"}
+}
+dependencies {
+    modCompile "serveradditionsutil:ServerAdditionsUtil:{VERSION}"
+}
+```
+
+## Usage
 For basic usage, simply create new instances of or extend `ServerSideBlock`, `ServerSideBlockItem` and `ServerSideItem`. The blocks/items created will be able to be used by unmodded clients. The names and recipes of these blocks/items should be specified just like any other blocks/items.
 
 For more advanced usage, Blocks may implement the interface `ClientBlockStateProvider` and Items may implement the interface `ClientItemStackProvider`. This should have the same effect.
