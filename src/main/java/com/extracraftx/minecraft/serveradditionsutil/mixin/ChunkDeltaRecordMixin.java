@@ -15,7 +15,7 @@ import net.minecraft.world.chunk.WorldChunk;
 @Mixin(ChunkDeltaUpdateS2CPacket.ChunkDeltaRecord.class)
 public abstract class ChunkDeltaRecordMixin{
 
-    @Redirect(method = "Lnet/minecraft/client/network/packet/ChunkDeltaUpdateS2CPacket/ChunkDeltaRecord;<init>(SLnet/minecraft/world/chunk/WorldChunk;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/chunk/WorldChunk;getBlockState(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState;"))
+    @Redirect(method = "<init>(SLnet/minecraft/world/chunk/WorldChunk;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/chunk/WorldChunk;getBlockState(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState;"))
     private BlockState getBlockStateProxy(WorldChunk chunk, BlockPos pos){
         BlockState actual = chunk.getBlockState(pos);
         Block block = actual.getBlock();
