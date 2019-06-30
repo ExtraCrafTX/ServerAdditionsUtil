@@ -22,6 +22,7 @@ You may also take a look at the `testing` branch of this repository to see an ex
 
 ## Known issues
 There are still many issues, but here are some that I already know of:
+* Modded items in crafting recipes don't show correctly (**WIP**)
 * Villager trades will not have the correct item displayed (**WIP**)
 * Picking up an item stack of a modded item in the creative inventory turns the item into what the client actually sees (**WIP**)
 * Just opening the creative inventory while in possesion of a modded block renders the block useless (**WIP**)
