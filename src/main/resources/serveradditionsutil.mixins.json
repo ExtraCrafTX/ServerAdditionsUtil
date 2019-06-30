@@ -6,6 +6,7 @@
     "ArrayPaletteMixin",
     "BlockUpdatePacketMixin",
     "ShapedRecipeMixin",
+    "ShapelessRecipeMixin",
     "SynchronizeRecipesPacketMixin",
     "GuiSlotUpdatePacketMixin",
     "InventoryPacketMixin",
