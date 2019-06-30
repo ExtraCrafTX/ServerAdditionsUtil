@@ -29,4 +29,7 @@ There are still many issues, but here are some that I already know of:
 * Falling block entities do not show the correct block state (**WIP**)
 * Using the added blocks/items in commands doesn't allow for auto-complete (**WIP**)
 * Command feedback for added blocks/items doesn't give the translated name (**WIP**)
-* Blocks with different strength to their representation don't have correct progress on client who's breaking block (**WIP**)
+* Blocks with different strength to their representation don't have correct progress on client who's breaking block (**Partially solved, probably impossible to fully solve**)
+
+## Features being considered
+* Allow blocks/items to be displayed without the vanilla variant on clients with the mod installed
