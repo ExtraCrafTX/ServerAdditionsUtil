@@ -10,7 +10,8 @@
     "GuiSlotUpdatePacketMixin",
     "InventoryPacketMixin",
     "EntityEquipmentUpdatePacketMixin",
-    "EntityTrackerUpdatePacketMixin"
+    "EntityTrackerUpdatePacketMixin",
+    "ServerWorldMixin"
   ],
   "injectors": {
     "defaultRequire": 1
