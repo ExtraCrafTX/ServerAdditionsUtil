@@ -13,7 +13,9 @@
     "EntityEquipmentUpdatePacketMixin",
     "EntityTrackerUpdatePacketMixin",
     "ServerWorldMixin",
-    "FallingBlockEntityMixin"
+    "FallingBlockEntityMixin",
+    "SetTradeOffersPacketMixin",
+    "TradeOfferMixin"
   ],
   "injectors": {
     "defaultRequire": 1
