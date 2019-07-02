@@ -29,11 +29,9 @@ You may also take a look at the `testing` branch of this repository to see an ex
 
 ## Known issues
 There are still many issues, but here are some that I already know of:
-* Villager trades will not have the correct item displayed (**WIP**)
 * Picking up an item stack of a modded item in the creative inventory turns the item into what the client actually sees (**WIP**)
 * Just opening the creative inventory while in possesion of a modded block renders the block useless (**WIP**)
 * Picking a block (middle click) in creative just gives you the vanilla version
-* Falling block entities do not show the correct block state (**WIP**)
 * Using the added blocks/items in commands doesn't allow for auto-complete (**WIP**)
 * Command feedback for added blocks/items doesn't give the translated name (**WIP**)
 * Blocks with different strength to their representation don't have correct progress on client who's breaking block (**Partially solved, probably impossible to fully solve**)
