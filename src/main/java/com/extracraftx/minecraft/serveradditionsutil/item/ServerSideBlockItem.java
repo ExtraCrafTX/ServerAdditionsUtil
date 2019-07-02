@@ -9,6 +9,7 @@ import net.minecraft.client.resource.language.I18n;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.util.Identifier;
 
@@ -64,6 +65,11 @@ public class ServerSideBlockItem extends BlockItem implements ClientItemStackPro
     @Override
     public Identifier getId() {
         return id;
+    }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return new TextComponent(super.getName(stack).getFormattedText());
     }
 
 }

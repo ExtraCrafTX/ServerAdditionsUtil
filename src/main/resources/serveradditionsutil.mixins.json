@@ -15,7 +15,8 @@
     "ServerWorldMixin",
     "FallingBlockEntityMixin",
     "SetTradeOffersPacketMixin",
-    "TradeOfferMixin"
+    "TradeOfferMixin",
+    "ItemStackMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -26,8 +26,7 @@ There are still many issues, but here are some that I already know of:
 * Just opening the creative inventory while in possesion of a modded block renders the block useless (**WIP**)
 * Picking a block (middle click) in creative just gives you the vanilla version
 * Using the added blocks/items in commands doesn't allow for auto-complete (**WIP**)
-* Command feedback for added blocks/items doesn't give the translated name (**WIP**)
-* Blocks with different strength to their representation don't have correct progress on client who's breaking block (**Partially solved, probably impossible to fully solve**)
+* Blocks with different strength to their representation don't have correct progress on client who's breaking block (**Partially solved, glitchy, probably impossible to fully solve**)
 
 ## Features being considered
 * Allow blocks/items to be displayed without the vanilla variant on clients with the mod installed
