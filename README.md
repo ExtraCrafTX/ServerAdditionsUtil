@@ -13,12 +13,13 @@ A utility that allows for easy server-side-only additions to the game.
 ## Maven
 ```gradle
 repositories {
-    maven { url "https://minecraft.curseforge.com/api/maven"}
+    maven { url "https://maven.extracraftx.com"}
 }
 dependencies {
-    modCompile "serveradditionsutil:ServerAdditionsUtil:{VERSION}"
+    modCompile "com.extracraftx.minecraft:ServerAdditionsUtil:{VERSION}"
 }
 ```
+*Note: only versions `0.0.9` and above are available on this repository*
 
 ## Usage
 For basic usage, simply create new instances of or extend `ServerSideBlock`, `ServerSideBlockItem` and `ServerSideItem`. The blocks/items created will be able to be used by unmodded clients. The names and recipes of these blocks/items should be specified just like any other blocks/items.
@@ -33,8 +34,8 @@ There are still many issues, but here are some that I already know of:
 * Just opening the creative inventory while in possesion of a modded block renders the block useless (**WIP**)
 * Picking a block (middle click) in creative just gives you the vanilla version
 * Using the added blocks/items in commands doesn't allow for auto-complete (**WIP**)
-* Command feedback for added blocks/items doesn't give the translated name (**WIP**)
-* Blocks with different strength to their representation don't have correct progress on client who's breaking block (**Partially solved, probably impossible to fully solve**)
+* Blocks with different strength to their representation don't have correct progress on client who's breaking block (**Partially solved, glitchy, probably impossible to fully solve**)
 
 ## Features being considered
 * Allow blocks/items to be displayed without the vanilla variant on clients with the mod installed
+* Support server resource packs for language and custom textures
