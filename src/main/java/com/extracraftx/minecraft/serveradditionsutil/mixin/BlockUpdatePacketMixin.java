@@ -18,8 +18,10 @@ public abstract class BlockUpdatePacketMixin{
     @Shadow
     private BlockState state;
 
-    @Inject(method = "<init>(Lnet/minecraft/world/BlockView;Lnet/minecraft/util/math/BlockPos;)V", at = @At("RETURN"))
+    @Inject(method = "<init>", at = @At("RETURN"))
     private void onInit(CallbackInfo info){
+        if(state == null)
+            return;
         Block block = this.state.getBlock();
         if(block instanceof ClientBlockStateProvider){
             this.state = ((ClientBlockStateProvider)block).getClientBlockState(this.state);

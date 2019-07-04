@@ -19,8 +19,10 @@ public abstract class SynchronizeRecipesPacketMixin{
     @Shadow
     private List<Recipe<?>> recipes;
 
-    @Inject(method = "<init>(Ljava/util/Collection;)V", at = @At("RETURN"))
+    @Inject(method = "<init>", at = @At("RETURN"))
     private void onInit(CallbackInfo info){
+        if(recipes == null)
+            return;
         for(int i = 0; i < recipes.size(); i++){
             Recipe<?> recipe = recipes.get(i);
             if(recipe instanceof ClientRecipeProvider){

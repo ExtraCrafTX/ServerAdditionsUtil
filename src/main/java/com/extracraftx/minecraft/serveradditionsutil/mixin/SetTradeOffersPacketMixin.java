@@ -18,8 +18,10 @@ public abstract class SetTradeOffersPacketMixin{
     @Shadow
     private TraderOfferList recipes;
 
-    @Inject(method = "<init>(ILnet/minecraft/village/TraderOfferList;IIZ)V", at=@At("RETURN"))
+    @Inject(method = "<init>", at=@At("RETURN"))
     private void onInit(CallbackInfo info){
+        if(recipes == null)
+            return;
         TraderOfferList clientRecipes = new TraderOfferList();
         for(TradeOffer original : recipes){
             clientRecipes.add(((ClientTradeOfferProvider)original).getClientTradeOffer(original));

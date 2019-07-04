@@ -21,8 +21,10 @@ public abstract class EntityTrackerUpdatePacketMixin{
     @Shadow
     private List<DataTracker.Entry<?>> trackedValues;
 
-    @Inject(method = "<init>(ILnet/minecraft/entity/data/DataTracker;Z)V", at = @At("RETURN"))
-    private void onInit(int id, DataTracker tracker, boolean full, CallbackInfo info){
+    @Inject(method = "<init>", at = @At("RETURN"))
+    private void onInit(CallbackInfo info){
+        if(trackedValues == null)
+            return;
         for(int i = 0; i < trackedValues.size(); i++){
             DataTracker.Entry entry = trackedValues.get(i);
             Object value = entry.get();

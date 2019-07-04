@@ -18,7 +18,7 @@ public abstract class EntityEquipmentUpdatePacketMixin{
     @Shadow
     private ItemStack stack;
 
-    @Inject(method = "<init>(ILnet/minecraft/entity/EquipmentSlot;Lnet/minecraft/item/ItemStack;)V", at = @At("RETURN"))
+    @Inject(method = "<init>", at = @At("RETURN"))
     private void onInit(CallbackInfo info){
         Item item = this.stack.getItem();
         if(item instanceof ClientItemStackProvider){
