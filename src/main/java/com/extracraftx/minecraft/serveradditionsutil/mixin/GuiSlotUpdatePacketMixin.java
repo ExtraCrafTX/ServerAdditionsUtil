@@ -18,7 +18,7 @@ public abstract class GuiSlotUpdatePacketMixin{
     @Shadow
     private ItemStack itemStack;
 
-    @Inject(method = "<init>(IILnet/minecraft/item/ItemStack;)V", at = @At("RETURN"))
+    @Inject(method = "<init>*", at = @At("RETURN"))
     private void onInit(CallbackInfo info){
         Item item = this.itemStack.getItem();
         if(item instanceof ClientItemStackProvider){

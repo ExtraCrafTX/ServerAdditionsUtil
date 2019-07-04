@@ -19,7 +19,7 @@ dependencies {
     modCompile "com.extracraftx.minecraft:ServerAdditionsUtil:{VERSION}"
 }
 ```
-*Note: only versions `0.0.9` and above are available on this repository*
+*Note: only versions `0.0.9` and above are available on this repository. For versions without sources/javadocs, [look here](https://github.com/ExtraCrafTX/ServerAdditionsUtil/blob/3b1d1bf553b05a7240dee1c70c4aec4d0293a017/README.md).*
 
 ## Usage
 For basic usage, simply create new instances of or extend `ServerSideBlock`, `ServerSideBlockItem` and `ServerSideItem`. The blocks/items created will be able to be used by unmodded clients. The names and recipes of these blocks/items should be specified just like any other blocks/items.

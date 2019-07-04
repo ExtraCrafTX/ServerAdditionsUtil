@@ -16,7 +16,13 @@
     "FallingBlockEntityMixin",
     "SetTradeOffersPacketMixin",
     "TradeOfferMixin",
-    "ItemStackMixin"
+    "ItemStackMixin",
+    "BlockStateParticleEffectMixin",
+    "ItemStackParticleEffectMixin"
+  ],
+  "client": [
+    "BlockStateParticleEffectClientMixin",
+    "ItemStackParticleEffectClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1
