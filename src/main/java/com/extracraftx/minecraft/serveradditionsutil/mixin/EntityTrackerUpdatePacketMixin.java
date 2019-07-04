@@ -21,9 +21,9 @@ public abstract class EntityTrackerUpdatePacketMixin{
     @Shadow
     private List<DataTracker.Entry<?>> trackedValues;
 
-    @Inject(method = "<init>", at = @At("RETURN"))
+    @Inject(method = "<init>*", at = @At("RETURN"))
     private void onInit(CallbackInfo info){
-        if(trackedValues == null)
+        if(this.trackedValues == null)
             return;
         for(int i = 0; i < trackedValues.size(); i++){
             DataTracker.Entry entry = trackedValues.get(i);

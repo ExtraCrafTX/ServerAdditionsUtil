@@ -20,9 +20,9 @@ public abstract class InventoryPacketMixin{
     @Shadow
     private List<ItemStack> slotStackList;
 
-    @Inject(method = "<init>", at= @At("RETURN"))
+    @Inject(method = "<init>*", at= @At("RETURN"))
     private void onInit(CallbackInfo info){
-        if(slotStackList == null)
+        if(this.slotStackList == null)
             return;
         for(int i = 0; i < slotStackList.size(); i++){
             ItemStack original = slotStackList.get(i);

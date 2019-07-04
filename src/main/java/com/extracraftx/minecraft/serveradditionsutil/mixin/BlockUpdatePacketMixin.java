@@ -18,9 +18,9 @@ public abstract class BlockUpdatePacketMixin{
     @Shadow
     private BlockState state;
 
-    @Inject(method = "<init>", at = @At("RETURN"))
+    @Inject(method = "<init>*", at = @At("RETURN"))
     private void onInit(CallbackInfo info){
-        if(state == null)
+        if(this.state == null)
             return;
         Block block = this.state.getBlock();
         if(block instanceof ClientBlockStateProvider){

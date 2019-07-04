@@ -18,9 +18,9 @@ public abstract class SetTradeOffersPacketMixin{
     @Shadow
     private TraderOfferList recipes;
 
-    @Inject(method = "<init>", at=@At("RETURN"))
+    @Inject(method = "<init>*", at=@At("RETURN"))
     private void onInit(CallbackInfo info){
-        if(recipes == null)
+        if(this.recipes == null)
             return;
         TraderOfferList clientRecipes = new TraderOfferList();
         for(TradeOffer original : recipes){
