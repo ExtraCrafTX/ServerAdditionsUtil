@@ -14,11 +14,13 @@
     "EntityTrackerUpdatePacketMixin",
     "ServerWorldMixin",
     "FallingBlockEntityMixin",
-    "SetTradeOffersPacketMixin",
     "TradeOfferMixin",
     "ItemStackMixin",
     "BlockStateParticleEffectMixin",
-    "ItemStackParticleEffectMixin"
+    "ItemStackParticleEffectMixin",
+    "IngredientMixin",
+    "SetTradeOffersPacketMixin",
+    "SetTradeOffersPacketMixinNew"
   ],
   "client": [
     "BlockStateParticleEffectClientMixin",
@@ -26,5 +28,6 @@
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "plugin": "com.extracraftx.minecraft.serveradditionsutil.mixin.Plugin"
 }

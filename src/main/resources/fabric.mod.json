@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "serveradditionsutil",
-  "version": "0.1.0",
+  "version": "0.2.0",
 
   "name": "serveradditionsutil",
   "description": "An API to allow server side additions of blocks and items.",
