@@ -19,7 +19,7 @@ public class ServerAdditionsUtil implements ModInitializer {
         HealingBlock healingBlock = new HealingBlock(healingBlockId, FabricBlockSettings.copy(Blocks.SPONGE).build());
         Registry.register(Registry.BLOCK, healingBlockId, healingBlock);
         Registry.register(Registry.ITEM, healingBlockId, new ServerSideBlockItem(healingBlock, healingBlockId,
-                new Item.Settings().group(ItemGroup.MISC).maxCount(16)));
+                new Item.Settings().group(ItemGroup.MISC).maxCount(16), "Healing Block"));
     }
 
 }
