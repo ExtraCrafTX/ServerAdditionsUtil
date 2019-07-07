@@ -4,6 +4,7 @@ import com.extracraftx.minecraft.serveradditionsutil.interfaces.ClientItemStackP
 import com.extracraftx.minecraft.serveradditionsutil.interfaces.ClientTradeOfferProvider;
 
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -14,8 +15,8 @@ import net.minecraft.village.TradeOffer;
 public abstract class TradeOfferMixin implements ClientTradeOfferProvider{
     
     @Override
-    public TradeOffer getClientTradeOffer(TradeOffer original) {
-        CompoundTag tag = original.toTag();
+    public TradeOffer getClientTradeOffer() {
+        CompoundTag tag = this.toTag();
         ItemStack buy = convertStack(ItemStack.fromTag(tag.getCompound("buy")));
         buy.toTag(tag.getCompound("buy"));
         ItemStack buyB = convertStack(ItemStack.fromTag(tag.getCompound("buyB")));
@@ -31,6 +32,11 @@ public abstract class TradeOfferMixin implements ClientTradeOfferProvider{
             return ((ClientItemStackProvider)item).getClientItemStack(original);
         }
         return original;
+    }
+
+    @Shadow
+    public CompoundTag toTag(){
+        return null;
     }
     
 }

@@ -4,6 +4,6 @@ import net.minecraft.recipe.Recipe;
 
 public interface ClientRecipeProvider<T extends Recipe<?>> {
 
-    public T getClientRecipe(T original);
+    public T getClientRecipe();
 
 }

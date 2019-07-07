@@ -13,12 +13,12 @@ import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TraderOfferList;
 
 @Mixin(SetTradeOffersPacket.class)
-public abstract class SetTradeOffersPacketMixin{
+public abstract class SetTradeOffersPacketMixinNew{
 
     @Shadow
     private TraderOfferList recipes;
 
-    @Inject(method = "<init>(ILnet/minecraft/village/TraderOfferList;IIZ)V", at=@At("RETURN"))
+    @Inject(method = "<init>(ILnet/minecraft/village/TraderOfferList;IIZZ)V", at=@At("RETURN"))
     private void onInit(CallbackInfo info){
         System.out.println("init SetTradeOffers");
         if(this.recipes == null)

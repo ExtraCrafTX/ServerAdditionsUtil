@@ -24,7 +24,7 @@ public abstract class SynchronizeRecipesPacketMixin{
         for(int i = 0; i < recipes.size(); i++){
             Recipe<?> recipe = recipes.get(i);
             if(recipe instanceof ClientRecipeProvider){
-                recipes.set(i, ((ClientRecipeProvider)recipe).getClientRecipe(recipe));
+                recipes.set(i, ((ClientRecipeProvider)recipe).getClientRecipe());
             }
         }
     }
