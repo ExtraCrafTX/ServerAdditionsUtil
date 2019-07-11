@@ -21,7 +21,8 @@
     "ItemStackParticleEffectMixin",
     "IngredientMixin",
     "SetTradeOffersPacketMixin",
-    "SetTradeOffersPacketMixinNew"
+    "SetTradeOffersPacketMixinNew",
+    "ChunkDeltaRecordMixin"
   ],
   "client": [
     "BlockStateParticleEffectClientMixin",
