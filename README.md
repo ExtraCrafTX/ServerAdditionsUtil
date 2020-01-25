@@ -1,4 +1,4 @@
-# ServerAdditionsUtil
+# ServerAdditionsUtil [![Latest version][version-image]][version-link]
 A utility that allows for easy server-side-only additions to the game.
 
 **This project is still very much a work in progress and as such nothing is final! Literally *everything* is still subject to major changes!**
@@ -32,3 +32,6 @@ There are still many issues, but here are some that I already know of:
 ## Features being considered
 * Allow blocks/items to be displayed without the vanilla variant on clients with the mod installed
 * Support server resource packs for language and custom textures
+
+[version-image]: https://badges.kaamiljasani.com/curseforge/latest/325342
+[version-link]: https://maven.extracraftx.com/com/extracraftx/minecraft/ServerAdditionsUtil/
